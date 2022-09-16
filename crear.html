@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <img src="img/logo.svg" alt="Logo Imperial Real State">
+        <nav>
+            <a href="#" class="activo">RENTA CAR</a>
+        </nav>
+    </header>
+    <div class="menu">
+
+        <p class="copyright">&copy; Grupo G11</p>
+    </div>
+
+    <div class="fila grid">
+        <div class="card">
+
+            <div class="footer-card">
+
+                <script>
+                    function diccionarioJSON() {
+                        var diccionario = {
+                            id: $("#id").val(),
+                            brand: $("#brand").val(),
+                            model: $("#model").val(),
+                            category_id: $("#category_id").val()
+                        };
+                        var datos_enviados = JSON.stringify(diccionario);
+                        console.log(diccionario);
+                        $.ajax({
+                            type: "POST",
+                            url: "https://g1a275dd941b3f6-dbamintic.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/car/car",
+                            data: diccionario,
+                            success: function () { alert("Informacin enviada"); },
+                            dataType: "json"
+
+                        });
+
+                    }
+                </script>
+                <div>
+                    <p>Creación de Carros</p>
+                    <p></p>
+                    <form>
+                        <label class="label">Identificador del Auto motor </label>
+                        <input type="number" autocomplete="off" placeholder="Identificador" id="id" class="input"
+                            required>
+                        <label class="label">Marca </label>
+                        <input type="text" autocomplete="off" placeholder="Ingresa Marca" id="brand" class="input"
+                            required>
+                        <label class="label">Modelo </label>
+                        <input type="text" autocomplete="off" placeholder="Modelo" id="model" class="input" required>
+                        <label class="label">Categoria </label>
+                        <input type="number" autocomplete="off" placeholder="category_id" id="category_id" class="input"
+                            required>
+
+                    </form>
+                </div>
+                <p></p>
+                <button onClick="diccionarioJSON()">
+                    <div class="svg-wrapper-1">
+                        <div class="svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <span>Enviar</span>
+                </button>
+
+
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="footer-card">
+                <div>
+                    <p>Detalles de los datos indexados </p>
+                    <p></p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
+    <footer class="fila">
+        <div class="col-33">
+            <p>Renta CAR</p>
+            <p class="flex-start">
+                <img class="m-r-small" src="img/map.svg" alt="Icono de mapa">
+                Calle 1 N 1-1
+            </p>
+            <p>Bogota DC </p>
+            <p class="flex-start">
+                <img class="m-r-small" src="img/phone.svg" alt="Icono de teléfono">
+                +34951000000
+            </p>
+            <p class="flex-start">
+                <img class="m-r-small" src="img/mail.svg" alt="Icono de email">
+                info@rentacar.com
+            </p>
+        </div>
+        <div class="col-33">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.9661094790026!2d-4.89145418531769!3d36.50668018001005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7327fed804f7f5%3A0x4806dfa1e50c2dd2!2sMarbella%20Center%2C%2029602%20Marbella%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1611743016986!5m2!1ses!2ses"
+                width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                tabindex="0"></iframe>
+        </div>
+        <div class="col-33">
+            <div class="flex-around">
+                <img class="rrss" src="img/facebook.svg" alt="Icono de Facebook">
+                <img class="rrss" src="img/twitter.svg" alt="Icono de Twitter">
+                <img class="rrss" src="img/whatsapp.svg" alt="Icono de Whatsapp">
+                <img class="rrss" src="img/instagram.svg" alt="Icono de Instagram">
+            </div>
+            <div class="flex-around m-t">
+                <a href="contacto.html#aviso">Aviso legal</a>
+                <a href="contacto.html#cookies">Política de cookies</a>
+            </div>
+            <p class="copyright m-t">&copy; USA G11</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
