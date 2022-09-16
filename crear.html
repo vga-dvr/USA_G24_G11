@@ -7,11 +7,11 @@
     <title>Inicio</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-
+    
 </head>
 
 <body>
-
+    <script src="js/consumo.js"></script>
     <header>
         <img src="img/logo.svg" alt="Logo Imperial Real State">
         <nav>
@@ -28,27 +28,7 @@
 
             <div class="footer-card">
 
-                <script>
-                    function diccionarioJSON() {
-                        var diccionario = {
-                            id: $("#id").val(),
-                            brand: $("#brand").val(),
-                            model: $("#model").val(),
-                            category_id: $("#category_id").val()
-                        };
-                        var datos_enviados = JSON.stringify(diccionario);
-                        console.log(diccionario);
-                        $.ajax({
-                            type: "POST",
-                            url: "https://g1a275dd941b3f6-dbamintic.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/car/car",
-                            data: diccionario,
-                            success: function () { alert("Informacin enviada"); },
-                            dataType: "json"
-
-                        });
-
-                    }
-                </script>
+               
                 <div>
                     <p>Creación de Carros</p>
                     <p></p>
