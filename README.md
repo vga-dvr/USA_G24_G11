@@ -32,24 +32,9 @@ gratitud. Estos mensajes serán leídos por el usuario administrador.
 Creación de BD archivo, Script_DBA
 Generación api 
 Base de datos Oracle 
+<<<<<<< HEAD
 
-# CREACION DE CARROS – CLIENTES - MENSAJES
-# Primer requerimiento -> POST
-Ingreso de datos de la tabla Carros (Id, Brand-Model-Categoria_id)
-Ingreso de datos de la tabla Cliente (Id,Name, Email,Age)
-Ingreso de datos de la tabla Mensaje (Id,mensaje)
 
-# Segundo requerimiento -> GET
-Lista de los elementos registrados en la tabla Carros.
-Lista de clientes.
-Lista de mensajes.
-
-# Tercer requerimiento -> PUT
-Enlace sección “detalle” Carro
-Enlace sección “detalle” Cliente
-Enlace sección “detalle” Mensaje
-
-# Cuarto requerimiento -> DELETE
-Eliminar Carro
-Eliminar Mensaje
-
+=======
+# C
+>>>>>>> 2b08a4df1773db4519e7fdb2c4d98ff5a27fd992
