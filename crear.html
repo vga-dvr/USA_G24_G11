@@ -2,37 +2,37 @@
 <html lang="es">
 
 <head>
+    <!-- Configuracion y llamado del recurso css que permite dar los estilos al html  -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.4.1.min.js"></script>
-    
+
 </head>
 
 <body>
+    <!--llamado del recurso javaScript donde se encuentran las funciones del ajax  -->
     <script src="js/consumo.js"></script>
     <header>
-        <img src="img/logo.svg" alt="Logo Imperial Real State">
+        <!-- Configuracion del logo y encabezado de la web  -->
+        <img src="img/logo.svg" alt="Logo  Renta Car">
         <nav>
-            <a href="#" class="activo">RENTA CAR</a>
+            <a href="index.html" class="activo">RENTA CAR</a>
         </nav>
     </header>
-    <div class="menu">
 
-        <p class="copyright">&copy; Grupo G11</p>
-    </div>
-
+    <!-- seccion  primera tarjeta nombrada como creacion de carros,cuenta con la etiqueta card llamada del recurso CSS -->
     <div class="fila grid">
         <div class="card">
-
             <div class="footer-card">
-
-               
                 <div>
                     <p>Creación de Carros</p>
                     <p></p>
+
+                    <!-- Definicion de los datos ingresados por el usuario estos se encuentra en form para dar mayor facilidad al manejo del ajax en el recurso consumo js   -->
                     <form>
+                        <!-- Se toma la etiqueta id= para lograr identificar la clave en el ajax  -->
                         <label class="label">Identificador del Auto motor </label>
                         <input type="number" autocomplete="off" placeholder="Identificador" id="id" class="input"
                             required>
@@ -48,7 +48,8 @@
                     </form>
                 </div>
                 <p></p>
-                <button onClick="diccionarioJSON()">
+                <!-- Configuracion del boton enviar llamando a la funcion del recurso consumo js, el boton esta ligado con configuracion css  -->
+                <button onClick="peticionPOST()">
                     <div class="svg-wrapper-1">
                         <div class="svg-wrapper">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -59,49 +60,16 @@
                             </svg>
                         </div>
                     </div>
+                    <!-- Nombre de vista para el usuario -->
                     <span>Enviar</span>
                 </button>
 
-           
- 
 
-<!--Comentario inio formulario Mensajes
-            <div class="footer-message">
-
-                <div>
-                    <p>Registro Mensajes</p>
-                    <p></p>
-                    <form>
-                        <label class="label">Identificador</label>
-                        <input type="number" autocomplete="off" placeholder="Identificador" id="id" class="input"
-                            required>
-                        <label class="label">Mensaje </label>
-                        <input type="text" autocomplete="off" placeholder="Ingresar Mensaje" id="messagetext" class="input"
-                            required>
-                       
-                    </form>
-                </div>
-                <p></p>
-                <button onClick="diccionarioJSON()">
-                    <div class="svg-wrapper-1">
-                        <div class="svg-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path fill="currentColor"
-                                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                    <span>Enviar</span>
-                </button>
             </div>
-Fin comentario-->        
-       
-
         </div>
 
-        </div>
+        <!-- Nueva seccion llamada Detalle de los datos, esta debe reflejar los detalles del ajax GET, cuenta con la etiqueta card llamada del recurso CSS-->
+
         <div class="card">
 
             <div class="footer-card">
@@ -118,6 +86,11 @@ Fin comentario-->
     </div>
 
 
+
+
+
+    
+<!-- En la siguiente seccion encontraras el pie de pagina, se llama la clase fila del recurso css -->
     <footer class="fila">
         <div class="col-33">
             <p>Renta CAR</p>
@@ -136,11 +109,14 @@ Fin comentario-->
             </p>
         </div>
         <div class="col-33">
+            <!-- Configuracion del iframe que define la ruta de Google maps-->
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.9661094790026!2d-4.89145418531769!3d36.50668018001005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7327fed804f7f5%3A0x4806dfa1e50c2dd2!2sMarbella%20Center%2C%2029602%20Marbella%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1611743016986!5m2!1ses!2ses"
                 width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
                 tabindex="0"></iframe>
         </div>
+
+        <!-- Configuracion de las redes sociales-->
         <div class="col-33">
             <div class="flex-around">
                 <img class="rrss" src="img/facebook.svg" alt="Icono de Facebook">
