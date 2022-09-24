@@ -1,4 +1,5 @@
 //Declaración de varibles base de datos Oracle
+<<<<<<< HEAD
 UrlCar = "https://gb47cdc0cd0d1af-productos.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/car/car"
 
 
@@ -38,6 +39,11 @@ function peticionGet() {
     });
 }
 //Peticion Post modulo de CRUD carros
+=======
+UrlCar= "https://gb47cdc0cd0d1af-productos.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/car/car"
+UrlPut= "https://g4cab850130b15d-ciclo3proyectocar.adb.us-ashburn-1.oraclecloudapps.com/ords/admin/car/car"
+
+>>>>>>> eed65bdb319933826d180f9f359f40a6ba72455b
 function peticionPost() {
     var diccionario = {
         id: $("#id").val(),
@@ -57,14 +63,20 @@ function peticionPost() {
     });
 
 }
+<<<<<<< HEAD
 //Peticion Put modulo de CRUD carros
 function peticionPut() {
+=======
+
+function peticionPut(){
+>>>>>>> eed65bdb319933826d180f9f359f40a6ba72455b
     var diccionarioPut = {
         id: $("#idPut").val(),
         brand: $("#brandPut").val(),
         model: $("#modelPut").val(),
         category_id: $("#category_idPut").val()
     };
+<<<<<<< HEAD
 
     var jsonPut = JSON.stringify(diccionarioPut);
     $.ajax({
@@ -74,12 +86,24 @@ function peticionPut() {
         contentType: "application/json",
         complete: function (response) {
             if (response.status == 201) {
+=======
+    
+    var jsonPut = JSON.stringify(diccionarioPut);
+    $.ajax({
+        type:'PUT',
+        url:UrlCar,
+        data: jsonPut,
+        contentType:"application/json",
+        complete:function(response){
+            if(response.status == 201){
+>>>>>>> eed65bdb319933826d180f9f359f40a6ba72455b
                 alert("Editado con éxito!!")
             }
             console.log(response.status)
         }
     });
     console.log(jsonPut)
+<<<<<<< HEAD
 
 }
 
@@ -96,12 +120,34 @@ function peticionDelete() {
         contentType: "application/json",
         complete: function (response) {
             if (response.status == 204) {
+=======
+    
+}
+
+function peticionDelete(){
+    var diccionarioDelete = {
+        id: $("#idDelete").val(),
+    };
+    
+    var jsonDelete = JSON.stringify(diccionarioDelete);
+    $.ajax({
+        type:'DELETE',
+        url:UrlCar,
+        data: jsonDelete,
+        contentType:"application/json",
+        complete:function(response){
+            if(response.status == 204){
+>>>>>>> eed65bdb319933826d180f9f359f40a6ba72455b
                 alert("Eliminado con éxito!!")
             }
             console.log(response.status)
         }
     });
     console.log(jsonDelete)
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> eed65bdb319933826d180f9f359f40a6ba72455b
 }
 
