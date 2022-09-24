@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+    <!--Configuracion del HTML y llamado de los recursos CSS y Jquery-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
@@ -11,6 +12,7 @@
 </head>
 
 <body>
+    <!-- Llamado de imagenes para el logo de renta CAR -->
     <script src="js/consumo_carros.js"></script>
     <header>
         <img src="img/logo.svg" alt="Logo Imperial Real State">
@@ -24,7 +26,7 @@
 
             <div class="footer-card">
 
-
+                <!-- Modulo de creacion de carros -->
                 <div>
                     <p>Creación de Carros</p>
                     <p></p>
@@ -58,41 +60,11 @@
                     <span>Enviar</span>
                 </button>
 
-                <!--Comentario inio formulario Mensajes
-            <div class="footer-message">
 
-                <div>
-                    <p>Registro Mensajes</p>
-                    <p></p>
-                    <form>
-                        <label class="label">Identificador</label>
-                        <input type="number" autocomplete="off" placeholder="Identificador" id="id" class="input"
-                            required>
-                        <label class="label">Mensaje </label>
-                        <input type="text" autocomplete="off" placeholder="Ingresar Mensaje" id="messagetext" class="input"
-                            required>
-                       
-                    </form>
-                </div>
-                <p></p>
-                <button onClick="diccionarioJSON()">
-                    <div class="svg-wrapper-1">
-                        <div class="svg-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path fill="currentColor"
-                                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                    <span>Enviar</span>
-                </button>
-            </div>
-Fin comentario-->
 
             </div>
         </div>
+        <!-- Modulo >Actualizar Datos Carro -->
         <div class="card">
 
             <div class="footer-card">
@@ -101,18 +73,19 @@ Fin comentario-->
                     <p></p>
                     <form>
                         <label class="label">Identificador del Auto motor</label>
-                        <input type="number" autocomplete="off" placeholder="Identificador" id="idPut" class="input" required>
+                        <input type="number" autocomplete="off" placeholder="Identificador" id="idPut" class="input"
+                            required>
                         <label class="label">Marca </label>
                         <input type="text" autocomplete="off" placeholder="Ingresa Marca" id="brandPut" class="input"
                             required>
                         <label class="label">Modelo </label>
                         <input type="text" autocomplete="off" placeholder="Modelo" id="modelPut" class="input" required>
                         <label class="label">Categoria </label>
-                        <input type="number" autocomplete="off" placeholder="category_id" id="category_idPut" class="input"
-                            required>
+                        <input type="number" autocomplete="off" placeholder="category_id" id="category_idPut"
+                            class="input" required>
 
                     </form>
-                    <!-- Inicio función PUT-->
+                    <!-- -->
                     <p></p>
                     <button onClick="peticionPut()">
                         <div class="svg-wrapper-1">
@@ -133,20 +106,22 @@ Fin comentario-->
 
 
         </div>
-        <!--Inicio delete-->
+        <!-- Funcion Detalles  -->
+        <!--Modulo de la etiqueta de Detalles se encuentra en la misma clase de elminar-->
         <div class="card">
 
             <div class="footer-card">
                 <div>
-                    <p>Eliminar Carro</p>
+                    <p>Detalles</p>
                     <p></p>
                     <form>
-                        <label class="label">Identificador del Auto motor</label>
-                        <input type="number" autocomplete="off" placeholder="Identificador" id="idDelete" class="input" required>
+                        <label class="label">Detalles</label>
+                        <input type="number" autocomplete="off" placeholder="Identificador" id="idGet" class="input"
+                            required>
                     </form>
                     <!-- Inicio función DELETE-->
                     <p></p>
-                    <button onClick="peticionDelete()">
+                    <button onClick="peticionGet()">
                         <div class="svg-wrapper-1">
                             <div class="svg-wrapper">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -157,18 +132,53 @@ Fin comentario-->
                                 </svg>
                             </div>
                         </div>
-                        <span>Eliminar</span>
+                        <span>Detalles</span>
                     </button>
                 </div>
                 <!-- Fin función DELETE-->
             </div>
-        <!--Fin delete-->
-    </div>
-
-    </div>
-    </div>
 
 
+
+
+
+            <!--Inicio delete-->
+            <div class="card">
+
+                <div class="footer-card">
+                    <div>
+                        <p>Eliminar Carro</p>
+                        <p></p>
+                        <form>
+                            <label class="label">Identificador del Auto motor</label>
+                            <input type="number" autocomplete="off" placeholder="Identificador" id="idDelete"
+                                class="input" required>
+                        </form>
+                        <!-- Inicio función DELETE-->
+                        <p></p>
+                        <button onClick="peticionDelete()">
+                            <div class="svg-wrapper-1">
+                                <div class="svg-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <span>Eliminar</span>
+                        </button>
+                    </div>
+                    <!-- Fin función DELETE-->
+                </div>
+                <!--Fin delete-->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- En la siguiente seccion encontraras el pie de pagina, se llama la clase fila del recurso css -->
     <footer class="fila">
         <div class="col-33">
             <p>Renta CAR</p>
@@ -187,12 +197,14 @@ Fin comentario-->
             </p>
         </div>
         <div class="col-33">
+            <!-- Configuracion del iframe que define la ruta de Google maps-->
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.9661094790026!2d-4.89145418531769!3d36.50668018001005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7327fed804f7f5%3A0x4806dfa1e50c2dd2!2sMarbella%20Center%2C%2029602%20Marbella%2C%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1611743016986!5m2!1ses!2ses"
                 width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
                 tabindex="0"></iframe>
         </div>
         <div class="col-33">
+            <!-- Configuracion de las redes sociales-->
             <div class="flex-around">
                 <img class="rrss" src="img/facebook.svg" alt="Icono de Facebook">
                 <img class="rrss" src="img/twitter.svg" alt="Icono de Twitter">

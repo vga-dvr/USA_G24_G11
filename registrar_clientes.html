@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+    <script src="js/consumo_clientes.js"></script>
+    <header>
+        <img src="img/logo.svg" alt="Logo Imperial Real State">
+        <nav>
+            <a href="#" class="activo">REGISTRO CLIENTES</a>
+        </nav>
+    </header>
+
+    <div class="fila grid">
+        <div class="card">
+
+            <div class="footer-card">
+
+                <div>
+                    <p>Registro de Clientes</p>
+                    <p></p>
+                    <form>
+                        <label class="label">Identificación</label>
+                        <input type="number" autocomplete="off" placeholder="Identificacion" id="id" class="input" required>
+                        <label class="label">Nombre </label>
+                        <input type="text" autocomplete="off" placeholder="Nombre" id="name" class="input" required>
+                        <label class="label">E-mail </label>
+                        <input type="text" autocomplete="off" placeholder="E-mail" id="email" class="input" required>
+                        <label class="label">Edad </label>
+                        <input type="number" autocomplete="off" placeholder="Edad" id="age" class="input" required>
+
+                    </form>
+                </div>
+                <p></p>
+                <button onClick="peticionPost()">
+                    <div class="svg-wrapper-1">
+                        <div class="svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <span>Enviar</span>
+                </button>
+
+                <!--Comentario inio formulario Mensajes
+            <div class="footer-message">
+
+                <div>
+                    <p>Registro Mensajes</p>
+                    <p></p>
+                    <form>
+                        <label class="label">Identificador</label>
+                        <input type="number" autocomplete="off" placeholder="Identificador" id="id" class="input"
+                            required>
+                        <label class="label">Mensaje </label>
+                        <input type="text" autocomplete="off" placeholder="Ingresar Mensaje" id="messagetext" class="input"
+                            required>
+                       
+                    </form>
+                </div>
+                <p></p>
+                <button onClick="diccionarioJSON()">
+                    <div class="svg-wrapper-1">
+                        <div class="svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <span>Enviar</span>
+                </button>
+            </div>
+Fin comentario-->
+
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="footer-card">
+                <div>
+                    <p>Actualizar Datos Clientes</p>
+                    <p></p>
+                    <form>
+                        <label class="label">Identificación</label>
+                        <input type="number" autocomplete="off" placeholder="Identificacion" id="idPut" class="input" required>
+                        <label class="label">Nombre </label>
+                        <input type="text" autocomplete="off" placeholder="Nombre" id="namePut" class="input" required>
+                        <label class="label">E-mail </label>
+                        <input type="text" autocomplete="off" placeholder="E-mail" id="emailPut" class="input" required>
+                        <label class="label">Edad </label>
+                        <input type="number" autocomplete="off" placeholder="Edad" id="agePut" class="input" required>
+
+                    </form>
+                    <!-- Inicio función PUT-->
+                    <p></p>
+                    <button onClick="peticionPut()">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor"
+                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>Actualizar</span>
+                    </button>
+                </div>
+                <!-- Fin función PUT-->
+            </div>
+
+
+        </div>
+        <!--Inicio delete-->
+        <div class="card">
+
+            <div class="footer-card">
+                <div>
+                    <p>Eliminar Clientes</p>
+                    <p></p>
+                    <form>
+                        <label class="label">Identificación</label>
+                        <input type="number" autocomplete="off" placeholder="Identificación" id="idDelete" class="input" required>
+                    </form>
+                    <!-- Inicio función DELETE-->
+                    <p></p>
+                    <button onClick="peticionDelete()">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor"
+                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>Eliminar</span>
+                    </button>
+                </div>
+                <!-- Fin función DELETE-->
+            </div>
+        </div>
+    <!--Fin delete-->
+
+         <!--Inicio Detalles-->
+        <div class="card">
+
+            <div class="footer-card">
+                <div>
+                    <p>Detalles</p>
+                    <p></p>
+                    <form>
+                        <label class="label">Identificación</label>
+                        <input type="number" autocomplete="off" placeholder="Identificación" id="idGet" class="input" required>
+                    </form>
+                    <!-- Inicio función GET-->
+                    <p></p>
+                    <button onClick="peticionListaGet()">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor"
+                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>Lista Clientes</span>
+                    </button>
+<!--Boton Detalles-->
+                    <p></p>
+                    <button onClick="peticionGet()">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor"
+                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>Detalles</span>
+                    </button>
+<!--Fin detalles-->
+                </div>
+                <!-- Fin función GET-->
+            </div>
+        </div>
+    <!--Fin Detalles-->
+
+</body>
+
+</html>

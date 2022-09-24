@@ -4,9 +4,9 @@ function peticionPOST() {
     /*Crecion del diccionario con los valores del formulario crear.html */
     var diccionario = {
         id: $("#id").val(),
-        brand: $("#brand").val(),
-        model: $("#model").val(),
-        category_id: $("#category_id").val()
+        name: $("#name").val(),
+        email: $("#email").val(),
+        age: $("#age").val()
     };
     /* Variable y librearia que realiza la convercion de los datos a JSON*/
     var datos_enviados = JSON.stringify(diccionario);
